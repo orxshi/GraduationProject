@@ -6,6 +6,11 @@
 		Latex Template for Graduation Projects
 	</title>	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        img {
+          border: 1px solid #555;
+        }
+        </style>
 </head>
 
 <body>
@@ -21,7 +26,49 @@
 
     Click <a href="https://github.com/texstudio-org/texstudio/releases/download/4.5.1/texstudio-4.5.1-win-qt6.exe" download>here</a> to download TexStudio.
 
+    <h1>Citation</h1>
 
+    <p>Whenever you mention someone's idea or result, you must cite to that reference.</p>
+
+    <p>Visit <a href="https://scholar.google.com/">Scholar Google</a>.
+        Type the paper you are looking for.
+        Let's say name of the paper is
+        "CFD analysis of flow pattern and heat transfer in direct contact steam condensation".
+        Type few words of the paper and search.</p>
+
+    
+
+    <img src="scholar1.png" alt="Google Scholar search" width="50%" height=auto>
+
+    <p>Click cite.</p>
+
+    <img src="scholar2.png" alt="Google Scholar search" width="50%" height=auto>
+
+    <p>Click BibTeX.</p>
+
+    <img src="scholar3.png" alt="Google Scholar search" width="30%" height=auto>
+
+    <p>Copy everything to ref.bib.</p>
+
+    <img src="scholar4.png" alt="Google Scholar search" width="50%" height=auto>
+
+    <p>When you cite this paper, use label of the paper. In this example, the label is gulawani2006cfd.
+        Therefore, for citing do \cite{gulawani2006cfd}. After compilation, a number will appear whereever
+        you wanted the citation to be. List of references will appear under References in the order of 
+        citation.
+    </p>
+
+    <p>There are different types of citations such as article, book and report. The type of the citation was article
+        in the example above. Check out <a href="https://www.bibtex.com/e/entry-types/">bibtex.com</a> for examples
+        of different citations.
+    </p>
+
+    <p>
+        Sometimes there is no BibTeX available. In these cases,
+        make your own entry. Let's say you want to refer to a webpage such as google.com. In this case, you can
+        use @misc as shown in <a href="https://www.bibtex.com/e/entry-types/">bibtex.com</a>. In TexStudio, there is
+        a tab called Bibliography if you ever need.
+    </p>
     
 
 	
