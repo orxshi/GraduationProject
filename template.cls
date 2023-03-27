@@ -68,7 +68,7 @@
 \patchcmd{\abstract}{\null\vfil}{}{}{}
 
 \renewcommand{\bibname}{\raggedright References}
-\bibliographystyle{plain}
+\bibliographystyle{unstr}
 
 \titleformat{\chapter}[display]{\bfseries\centering}{\huge \chaptertitlename\ \thechapter}{1em}{\Huge #1}
 \renewcommand{\contentsname}{\raggedright Table of Contents}
