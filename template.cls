@@ -7,10 +7,13 @@
 \usepackage{float}
 \usepackage{booktabs}
 \usepackage[explicit]{titlesec}
-\usepackage{cleveref}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink]{cleveref}
 \usepackage{pgfplotstable}
 \usepackage[per-mode=symbol]{siunitx}
 \usepackage[toc,title]{appendix}
+\usepackage{url}
+\usepackage[section]{placeins}
 
 \AtBeginDocument{\maketitle}
 \bibliographystyle{unsrt}
@@ -21,6 +24,8 @@
 \newcommand*{\@project}{Graduation Project I}
 \newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}}
 \newcommand*{\myabstract}[1]{\gdef\@myabstract{#1}}
+\newcommand*{\department}[1]{\gdef\@department{#1}}
+\newcommand*{\@department}{Mechanical Engineering}
 
 \makeatletter
 \renewcommand*{\maketitle}{%
@@ -36,6 +41,8 @@
   {\huge\bfseries\xcapitalisewords{\@title}\unskip\strut\par}
   \vspace{2cm}
   {\Large\xcapitalisewords{\@author}\unskip\strut\par}
+  \vspace{2cm}
+  {\Large\xcapitalisewords Department of {\@department}\unskip\strut\par}
   \vfill
   Supervised by\par
   \@supervisor\unskip\strut\par
