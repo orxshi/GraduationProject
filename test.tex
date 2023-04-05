@@ -3,13 +3,17 @@
 \project{Graduation Project II}
 \title{Put your project title here}
 \author{Firstname1 surname1\\ firstname2 surname2}
-\supervisor{Assist. Prof. Dr. Atabak Rahimzadeh\\Dr. Orhan Shibliyev}
+\supervisor{Asst. Prof. Dr. Atabak Rahimzadeh\\Dr. Orhan Shibliyev}
 \department{Mechanical Engineering}
 \abst{Put your abstract here.}
 
+% Remove these lines if do not have nomenclature.
+\nomenclature{$\delta$}{Planck constant}
+\nomenclature{$c$}{Speed of light}
+
 \begin{document}
 
-\chapter{Introduction}
+\chapter{Introduction}\label{ch:in}
 
 If you want to write an equation, you can use
 
@@ -50,7 +54,6 @@ The file \texttt{ref.bib} contains your references. You can use google scholar t
 Here is how you include a figure. The figure will be placed to some appropriate location. This is most of the time recommended. If, for some reason, you want to put figure right under this paragraph, use [H] option in \textbackslash begin\{figure\}[H].
 
 \begin{figure}
-\centering
 \includegraphics[scale=0.2]{logo}
 \caption{Put your caption here.}
 \label{fig:logo}
@@ -62,8 +65,7 @@ Now I am going to cross-reference the figure by using its label \Cref{fig:logo}.
 
 This is how you make a table.
 
-\begin{table}[H]
-\centering
+\begin{table}
 \caption{Put table caption here.}
 \label{tab:city}
 \entries{
@@ -81,15 +83,11 @@ Let's cross-reference to \Cref{tab:city}.
 
 You can cross-reference to a chapter or section by using its label. Let's cross-reference to Literature Review chapter such as \Cref{ch:lr}.
 
-\chapter{Methodology}
-\chapter{Results}
-\chapter{Conclusion}
+\chapter{Methodology}\label{ch:me}
+\chapter{Results}\label{ch:re}
+\chapter{Conclusion}\label{ch:co}
 
-\bibliography{ref}
-
-\begin{appendices}
-\chapter{Your first appendix chapter}
-\section{Your first appendix section}
-\end{appendices}
+% You do not need to remove this even if you do not have appendices.
+\appendix % Anything you add will belong to appendix from this point on.
 
 \end{document}

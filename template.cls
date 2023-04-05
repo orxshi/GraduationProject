@@ -14,6 +14,9 @@
 \usepackage[toc,title]{appendix}
 \usepackage{url}
 \usepackage[section]{placeins}
+\usepackage{nomencl}
+
+\makenomenclature
 
 \AtBeginDocument{\maketitle}
 \bibliographystyle{unsrt}
@@ -59,6 +62,7 @@
 \tableofcontents
 \listoffigures
 \listoftables
+\printnomenclature
 \newpage
 \pagenumbering{arabic}
 }
@@ -68,7 +72,6 @@
 \patchcmd{\abstract}{\null\vfil}{}{}{}
 
 \renewcommand{\bibname}{\raggedright References}
-\bibliographystyle{unstr}
 
 \titleformat{\chapter}[display]{\bfseries\centering}{\huge \chaptertitlename\ \thechapter}{1em}{\Huge #1}
 \renewcommand{\contentsname}{\raggedright Table of Contents}
@@ -86,3 +89,27 @@
 }
 
 \newcommand{\entries}{\pgfplotstabletypeset}
+
+\newtoggle{appendixbib}
+\pretocmd\appendix{\toggletrue{appendixbib}\bibliography{ref}}{}{}
+\AtEndDocument{\iftoggle{appendixbib}{}{\bibliography{ref}}}
+
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+
+\renewenvironment{figure}[1][H]{%
+	\origfigure[#1]%
+	\centering
+}{%
+	\endorigfigure
+}
+
+\let\origtable\table
+\let\endorigtable\endtable
+
+\renewenvironment{table}[1][H]{%
+	\origtable[#1]%
+	\centering
+}{%
+	\endorigtable
+}
